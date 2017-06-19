@@ -1,7 +1,7 @@
-/*
-Á·Ï°ÀàÐÍ£ºC++primer5  string¶ÔÏóÑ§Ï°Á·Ï°
-Ê±¼ä£º2017Äê6ÔÂ17ÈÕ13:47:59
-³ÌÐò¹¦ÄÜ£ºstring¶ÔÏóÁ·Ï°01
+ï»¿/*
+ç»ƒä¹ ç±»åž‹ï¼šC++primer5  stringå¯¹è±¡å­¦ä¹ ç»ƒä¹ 
+æ—¶é—´ï¼š2017å¹´6æœˆ17æ—¥13:47:59
+ç¨‹åºåŠŸèƒ½ï¼šstringå¯¹è±¡ç»ƒä¹ 01 
 */
 #include <iostream>
 #include <string>
@@ -10,35 +10,35 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::getline;
-//²»ÒªÊ¹ÓÃusing namespace std;
+//ä¸è¦ä½¿ç”¨using namespace std;
 int main() 
 {
-	//²âÊÔ³õÊ¼»¯µÄ¼¸ÖÖ·½Ê½
-	cout << "³õÊ¼»¯²âÊÔ" << endl;
-	string s;				//Ä¬ÈÏ³õÊ¼»¯£¬sÊÇÒ»¸ö¿Õ´®
+	//æµ‹è¯•åˆå§‹åŒ–çš„å‡ ç§æ–¹å¼
+	cout << "åˆå§‹åŒ–æµ‹è¯•" << endl;
+	string s;				//é»˜è®¤åˆå§‹åŒ–ï¼Œsæ˜¯ä¸€ä¸ªç©ºä¸²
 	cout << s << endl;
-	string s1("hello");		//Ö±½Ó³õÊ¼»¯
+	string s1("hello");		//ç›´æŽ¥åˆå§‹åŒ–
 	cout << s1 << endl;
-	string s2(s1);			//Ö±½Ó³õÊ¼»¯£¬²»Ê¹ÓÃµÈºÅµÄÊÇÖ±½Ó³õÊ¼»¯
+	string s2(s1);			//ç›´æŽ¥åˆå§‹åŒ–ï¼Œä¸ä½¿ç”¨ç­‰å·çš„æ˜¯ç›´æŽ¥åˆå§‹åŒ–
 	cout << s2 << endl;		
-	string s3 = "excuse";	//¿½±´³õÊ¼»¯,Ê¹ÓÃµÈºÅ³õÊ¼»¯µÄ¶¼ÊÇ¿½±´³õÊ¼»¯
+	string s3 = "excuse";	//æ‹·è´åˆå§‹åŒ–,ä½¿ç”¨ç­‰å·åˆå§‹åŒ–çš„éƒ½æ˜¯æ‹·è´åˆå§‹åŒ–
 	cout << s3 << endl;
-	string s4 = s1;			//¿½±´³õÊ¼»¯
+	string s4 = s1;			//æ‹·è´åˆå§‹åŒ–
 	cout << s4 << endl;	
-	string s5(5,'b');		//Ö±½Ó³õÊ¼»¯£¬s5ÄÚÈÝÊÇbbbbb
+	string s5(5,'b');		//ç›´æŽ¥åˆå§‹åŒ–ï¼Œs5å†…å®¹æ˜¯bbbbb
 	cout << s5 << endl;
-	//ÏÂÃæÊÇ¸³Öµ·½Ê½²âÊÔ
+	//ä¸‹é¢æ˜¯èµ‹å€¼æ–¹å¼æµ‹è¯•
 	cout << "---------" << endl;
-	cout << "¸³Öµ²âÊÔ" << endl;
+	cout << "èµ‹å€¼æµ‹è¯•" << endl;
 	s = s3;
 	cout << s << endl;
-	s = "me";				//ÓÃ×Ö·û´®×ÖÃæÖµ¸østring¶ÔÏó¸³ÖµÊÇ¿ÉÐÐµÄ
+	s = "me";				//ç”¨å­—ç¬¦ä¸²å­—é¢å€¼ç»™stringå¯¹è±¡èµ‹å€¼æ˜¯å¯è¡Œçš„
 	cout << s << endl;
-	//ÏÂÃæÊÇstring¶ÔÏóµÄ±È½Ï£¬ÒÔ¼°+µÄÊ¹ÓÃ
-	//+ÊÇstring¶ÔÏó¿ÉÒÔ½øÐÐµÄ²Ù×÷£¬µ«×Ö·û´®×ÖÃæÖµÓëstringÊÇ²»Í¬µÄÀàÐÍ
-	//Òò´Ë±ØÐëÈ·±£Ã¿¸ö¼Ó·¨ÔËËã·ûÁ½²àµÄ¶ÔÏóÖÁÉÙÓÐÒ»¸öÊÇstring
+	//ä¸‹é¢æ˜¯stringå¯¹è±¡çš„æ¯”è¾ƒï¼Œä»¥åŠ+çš„ä½¿ç”¨
+	//+æ˜¯stringå¯¹è±¡å¯ä»¥è¿›è¡Œçš„æ“ä½œï¼Œä½†å­—ç¬¦ä¸²å­—é¢å€¼ä¸Žstringæ˜¯ä¸åŒçš„ç±»åž‹
+	//å› æ­¤å¿…é¡»ç¡®ä¿æ¯ä¸ªåŠ æ³•è¿ç®—ç¬¦ä¸¤ä¾§çš„å¯¹è±¡è‡³å°‘æœ‰ä¸€ä¸ªæ˜¯string
 	cout << "--------" << endl;
-	cout << "±È½Ïstring¶ÔÏó,ÒÔ¼°+µÄÊ¹ÓÃ" << endl;
+	cout << "æ¯”è¾ƒstringå¯¹è±¡,ä»¥åŠ+çš„ä½¿ç”¨" << endl;
 	s1 = "0";
 	s2 = "1";
 	s3 = "a";
@@ -51,46 +51,46 @@ int main()
 	if (s4 > s5) cout << s4 + ">" + s5 << endl;
 	else cout << s4 + ">" + s5 << endl;
 	cout << s1 + s2 + s3 + s4 + s5 << endl;
-	cout << "²âÊÔ¿É·ñÊ¹ÓÃ\\nÈ¡´ústd::endl----¿ÉÒÔ\n";  //¿ÉÒÔ
-	//¶ÁÈ¡Á·Ï°
-	/*ÔÚÊäÈë¡°yes rpg¡±Ö®ºó£¬ÏÂÃæµÄgetline²»¾­µÈ´ýÔÙ´ÎÊäÈëÖ±½Ó¾Í¶ÁÈ¡ÁËÊ£ÏÂµÄ¡°rpg¡°£¬
-	¾­²âÊÔÖ»ÊäÈëÒ»¸öyes£¬getlineÒ²»áÖ±½Ó¶ÁÈ¡Ò»¸ö¿Õ×Ö·û´®¡£
-	ÕâÊÇÒòÎªÊäÈë½áÊøºóÎÒÃÇÇÃ»÷»Ø³µ½«¡°\n¡±ÁôÔÚcinÖÐ£¬¶øgetlineÔò»áÒòÎª»»ÐÐ·ûµÄ´æÔÚ
-	²»ÔÙµÈ´ýÔÙ´ÎÊäÈëÖ±½Ó½«Ê£ÏÂµÄ×Ö·ûÊäÈë£¨»»ÐÐ·û±»¶ªÆú£©
+	cout << "æµ‹è¯•å¯å¦ä½¿ç”¨\\nå–ä»£std::endl----å¯ä»¥\n";  //å¯ä»¥
+	//è¯»å–ç»ƒä¹ 
+	/*åœ¨è¾“å…¥â€œyes rpgâ€ä¹‹åŽï¼Œä¸‹é¢çš„getlineä¸ç»ç­‰å¾…å†æ¬¡è¾“å…¥ç›´æŽ¥å°±è¯»å–äº†å‰©ä¸‹çš„â€œrpgâ€œï¼Œ
+	ç»æµ‹è¯•åªè¾“å…¥ä¸€ä¸ªyesï¼Œgetlineä¹Ÿä¼šç›´æŽ¥è¯»å–ä¸€ä¸ªç©ºå­—ç¬¦ä¸²ã€‚
+	è¿™æ˜¯å› ä¸ºè¾“å…¥ç»“æŸåŽæˆ‘ä»¬æ•²å‡»å›žè½¦å°†â€œ\nâ€ç•™åœ¨cinä¸­ï¼Œè€Œgetlineåˆ™ä¼šå› ä¸ºæ¢è¡Œç¬¦çš„å­˜åœ¨
+	ä¸å†ç­‰å¾…å†æ¬¡è¾“å…¥ç›´æŽ¥å°†å‰©ä¸‹çš„å­—ç¬¦è¾“å…¥ï¼ˆæ¢è¡Œç¬¦è¢«ä¸¢å¼ƒï¼‰
 	*/
 	cout << "--------" << endl;
-	cout << "¶ÁÈ¡Á·Ï°1£¬»ìÓÃÊ§°Ü" << endl;
+	cout << "è¯»å–ç»ƒä¹ 1ï¼Œæ··ç”¨å¤±è´¥" << endl;
 	cin >> s1;				
 	cout << s1 << "      //cin >> s1;" << endl;
 	getline(cin,s2);		
 	cout << s2 <<"       //getline(cin,s2)"<< endl;
-	//ÏÂÃæÊÇÕýÈ·µÄcinÓëgetline»ìÓÃ·½Ê½
-	cout <<"¶ÁÈ¡Á·Ï°2£¬»ìÓÃ³É¹¦"<<endl;
+	//ä¸‹é¢æ˜¯æ­£ç¡®çš„cinä¸Žgetlineæ··ç”¨æ–¹å¼
+	cout <<"è¯»å–ç»ƒä¹ 2ï¼Œæ··ç”¨æˆåŠŸ"<<endl;
 	cin >> s1;
 	cout << s1 << "      //cin >> s1;" << endl;
 	cin.ignore(1024,'\n');		
-	/*Ê¹ÓÃ¡°cin.ignore()¡±¿ÉÒÔÇå³ýÒÔ»Ø³µ½áÊøµÄÊäÈë»º³åÇøµÄÄÚÈÝ,
-	Ïû³ýÉÏÒ»´ÎÊäÈë¶ÔÏÂÒ»´ÎÊäÈëµÄÓ°Ïì,cin.ignoreÓÃ·¨£º´ÓÊäÈëÁ÷£¨cin£©ÖÐÌáÈ¡×Ö·û£¬
-	ÌáÈ¡µÄ×Ö·û±»ºöÂÔ£¨ignore£©£¬²»±»Ê¹ÓÃ¡£Ã¿Å×ÆúÒ»¸ö×Ö·û£¬Ëü¶¼Òª¼ÆÊýºÍ±È½Ï×Ö·û£º
-	Èç¹û¼ÆÊýÖµ´ïµ½a»òÕß±»Å×ÆúµÄ×Ö·ûÊÇch£¬Ôòcin.ignore()º¯ÊýÖ´ÐÐÖÕÖ¹£»·ñÔò£¬
-	Ëü¼ÌÐøµÈ´ý¡£Èç¹ûcin.ignore()²»¸ø²ÎÊý£¬ÔòÄ¬ÈÏ²ÎÊýÎªcin.ignore(1,EOF)£¬
-	¼´°ÑEOFÇ°µÄ1¸ö×Ö·ûÇåµô£¬Ã»ÓÐÓöµ½EOF¾ÍÇåµôÒ»¸ö×Ö·ûÈ»ºó½áÊø£¬»áµ¼ÖÂ²»ÕýÈ·µÄ½á¹û£¬
-	ÒòÎªEOFÊÇÎÄ¼þ½áÊø±êÊ¶¡£*/
+	/*ä½¿ç”¨â€œcin.ignore()â€å¯ä»¥æ¸…é™¤ä»¥å›žè½¦ç»“æŸçš„è¾“å…¥ç¼“å†²åŒºçš„å†…å®¹,
+	æ¶ˆé™¤ä¸Šä¸€æ¬¡è¾“å…¥å¯¹ä¸‹ä¸€æ¬¡è¾“å…¥çš„å½±å“,cin.ignoreç”¨æ³•ï¼šä»Žè¾“å…¥æµï¼ˆcinï¼‰ä¸­æå–å­—ç¬¦ï¼Œ
+	æå–çš„å­—ç¬¦è¢«å¿½ç•¥ï¼ˆignoreï¼‰ï¼Œä¸è¢«ä½¿ç”¨ã€‚æ¯æŠ›å¼ƒä¸€ä¸ªå­—ç¬¦ï¼Œå®ƒéƒ½è¦è®¡æ•°å’Œæ¯”è¾ƒå­—ç¬¦ï¼š
+	å¦‚æžœè®¡æ•°å€¼è¾¾åˆ°aæˆ–è€…è¢«æŠ›å¼ƒçš„å­—ç¬¦æ˜¯chï¼Œåˆ™cin.ignore()å‡½æ•°æ‰§è¡Œç»ˆæ­¢ï¼›å¦åˆ™ï¼Œ
+	å®ƒç»§ç»­ç­‰å¾…ã€‚å¦‚æžœcin.ignore()ä¸ç»™å‚æ•°ï¼Œåˆ™é»˜è®¤å‚æ•°ä¸ºcin.ignore(1,EOF)ï¼Œ
+	å³æŠŠEOFå‰çš„1ä¸ªå­—ç¬¦æ¸…æŽ‰ï¼Œæ²¡æœ‰é‡åˆ°EOFå°±æ¸…æŽ‰ä¸€ä¸ªå­—ç¬¦ç„¶åŽç»“æŸï¼Œä¼šå¯¼è‡´ä¸æ­£ç¡®çš„ç»“æžœï¼Œ
+	å› ä¸ºEOFæ˜¯æ–‡ä»¶ç»“æŸæ ‡è¯†ã€‚*/
 	getline(cin, s2);
 	cout << s2 << "       //getline(cin,s2)" << endl;
-	//ÏÂÃæÊÇstringµÄenptyºÍsize²Ù×÷
+	//ä¸‹é¢æ˜¯stringçš„enptyå’Œsizeæ“ä½œ
 	cout << "--------" << endl;
-	cout << "stringµÄenptyºÍsize²Ù×÷" << endl;
+	cout << "stringçš„enptyå’Œsizeæ“ä½œ" << endl;
 	if (!s2.empty())
-		cout << "s2·Ç¿Õ" << endl;
-	auto s2_size = s2.size();	//´Ë´¦µÄs2_sizeÊÇstring::size_typeÀàÐÍµÄ£¬ÎÞ·ûºÅÕûÊý
+		cout << "s2éžç©º" << endl;
+	auto s2_size = s2.size();	//æ­¤å¤„çš„s2_sizeæ˜¯string::size_typeç±»åž‹çš„ï¼Œæ— ç¬¦å·æ•´æ•°
 	cout << s2_size << endl;
 	return 0;
 }
 /***********
-ÔÚvisual studio 2017ÖÐµÄÔËÐÐ½á¹ûÎª£º
+åœ¨visual studio 2017ä¸­çš„è¿è¡Œç»“æžœä¸ºï¼š
 ---------------------------------------------
-³õÊ¼»¯²âÊÔ
+åˆå§‹åŒ–æµ‹è¯•
 
 hello
 hello
@@ -98,45 +98,45 @@ excuse
 hello
 bbbbb
 ---------
-¸³Öµ²âÊÔ
+èµ‹å€¼æµ‹è¯•
 excuse
 me
 --------
-±È½Ïstring¶ÔÏó,ÒÔ¼°+µÄÊ¹ÓÃ
+æ¯”è¾ƒstringå¯¹è±¡,ä»¥åŠ+çš„ä½¿ç”¨
 0>1
 a>A
 A>B
 01aAB
-²âÊÔ¿É·ñÊ¹ÓÃ\nÈ¡´ústd::endl----¿ÉÒÔ
+æµ‹è¯•å¯å¦ä½¿ç”¨\nå–ä»£std::endl----å¯ä»¥
 --------
-¶ÁÈ¡Á·Ï°1£¬»ìÓÃÊ§°Ü
+è¯»å–ç»ƒä¹ 1ï¼Œæ··ç”¨å¤±è´¥
 Yes RPG
 Yes      //cin >> s1;
 RPG        //getline(cin,s2)
-¶ÁÈ¡Á·Ï°2£¬»ìÓÃ³É¹¦
+è¯»å–ç»ƒä¹ 2ï¼Œæ··ç”¨æˆåŠŸ
 Yes RPG
 Yes      //cin >> s1;
 YEs RPG
 YEs RPG       //getline(cin,s2)
 --------
-stringµÄenptyºÍsize²Ù×÷
-s2·Ç¿Õ
+stringçš„enptyå’Œsizeæ“ä½œ
+s2éžç©º
 7
 ---------------------------------------------
 **********/
 /*
-Òªµã£º
-1.	²»ÒªÊ¹ÓÃ`using namespace std;`ÕâÑùºÜÈÝÒ×ÔÚ¸´ÔÓ³ÌÐòÖÐÒòÎªÆðÃû×Ö¶ø³ö´í¡£
-2.	string¶ÔÏó¿ÉÒÔÏà¼Ó£¬+ÊÇstring¶ÔÏó¿ÉÒÔ½øÐÐµÄ²Ù×÷£¬µ«×Ö·û´®×ÖÃæÖµÓëstringÊÇ
-²»Í¬µÄÀàÐÍÒò´Ë±ØÐëÈ·±£Ã¿¸ö¼Ó·¨ÔËËã·ûÁ½²àµÄ¶ÔÏóÖÁÉÙÓÐÒ»¸öÊÇstring¡£
-3.   cin>>Óëgetline£¨cin,s£©ÊäÈë»ìÓÃÊ±Ó¦½÷É÷µ±ÎÒÃÇÊ¹ÓÃcin>>ÊäÈëÒ»´®×Ö·û£¨¼´Ê¹
-×Ö·û´®ÖÐ¼ä¡¢½áÎ²Ã»ÓÐÈÎºÎ¿Õ°×·û£©£¬ÎÒÃÇ×îºóÇÃ»÷»Ø³µÀ´Íê³ÉÊäÈë£¬ÕâÑù»áÔÚ×Ö·û´®×î
-ºóÁôÏÂÒ»¸ö»»ÐÐ·û£¨\\n£©,ÓÉÓÚ»»ÐÐ·ûµÄ´æÔÚ£¬getline()»á²»µÈ´ýÔÙ´ÎÊäÈëÖ±½Ó½«cin>>
-ÊäÈëºóÊ£ÏÂµÄ×Ö·û´®Ö±½ÓÊäÈëµ½string¶ÔÏósÖÐ£¨»»ÐÐ·û±»¶ªÆú£©¡£¿ÉÒÔÊ¹ÓÃ¡°cin.ignore()¡±
-Çå³ýÒÔ»Ø³µ½áÊøµÄÊäÈë»º³åÇøµÄÄÚÈÝ,Ïû³ýÉÏÒ»´ÎÊäÈë¶ÔÏÂÒ»´ÎÊäÈëµÄÓ°Ïì.
-4.	cin.ignore(a,ch);ÓÃ·¨£º´ÓÊäÈëÁ÷£¨cin£©ÖÐÌáÈ¡×Ö·û£¬ÌáÈ¡µÄ×Ö·û±»ºöÂÔ£¨ignore£©£¬
-²»±»Ê¹ÓÃ¡£Ã¿Å×ÆúÒ»¸ö×Ö·û£¬Ëü¶¼Òª¼ÆÊýºÍ±È½Ï×Ö·û£ºÈç¹û¼ÆÊýÖµ´ïµ½a»òÕß±»Å×ÆúµÄ×Ö·û
-ÊÇch£¬Ôòcin.ignore()º¯ÊýÖ´ÐÐÖÕÖ¹£»·ñÔò£¬Ëü¼ÌÐøµÈ´ý¡£Èç¹ûcin.ignore()²»¸ø²ÎÊý£¬Ôò
-Ä¬ÈÏ²ÎÊýÎªcin.ignore(1,EOF)£¬¼´°ÑEOFÇ°µÄ1¸ö×Ö·ûÇåµô£¬Ã»ÓÐÓöµ½EOF¾ÍÇåµôÒ»¸ö×Ö·ûÈ»
-ºó½áÊø£¬»áµ¼ÖÂ²»ÕýÈ·µÄ½á¹û£¬ÒòÎªEOFÊÇÎÄ¼þ½áÊø±êÊ¶¡£
+è¦ç‚¹ï¼š
+1.	ä¸è¦ä½¿ç”¨`using namespace std;`è¿™æ ·å¾ˆå®¹æ˜“åœ¨å¤æ‚ç¨‹åºä¸­å› ä¸ºèµ·åå­—è€Œå‡ºé”™ã€‚
+2.	stringå¯¹è±¡å¯ä»¥ç›¸åŠ ï¼Œ+æ˜¯stringå¯¹è±¡å¯ä»¥è¿›è¡Œçš„æ“ä½œï¼Œä½†å­—ç¬¦ä¸²å­—é¢å€¼ä¸Žstringæ˜¯
+ä¸åŒçš„ç±»åž‹å› æ­¤å¿…é¡»ç¡®ä¿æ¯ä¸ªåŠ æ³•è¿ç®—ç¬¦ä¸¤ä¾§çš„å¯¹è±¡è‡³å°‘æœ‰ä¸€ä¸ªæ˜¯stringã€‚
+3.   cin>>ä¸Žgetlineï¼ˆcin,sï¼‰è¾“å…¥æ··ç”¨æ—¶åº”è°¨æ…Žå½“æˆ‘ä»¬ä½¿ç”¨cin>>è¾“å…¥ä¸€ä¸²å­—ç¬¦ï¼ˆå³ä½¿
+å­—ç¬¦ä¸²ä¸­é—´ã€ç»“å°¾æ²¡æœ‰ä»»ä½•ç©ºç™½ç¬¦ï¼‰ï¼Œæˆ‘ä»¬æœ€åŽæ•²å‡»å›žè½¦æ¥å®Œæˆè¾“å…¥ï¼Œè¿™æ ·ä¼šåœ¨å­—ç¬¦ä¸²æœ€
+åŽç•™ä¸‹ä¸€ä¸ªæ¢è¡Œç¬¦ï¼ˆ\\nï¼‰,ç”±äºŽæ¢è¡Œç¬¦çš„å­˜åœ¨ï¼Œgetline()ä¼šä¸ç­‰å¾…å†æ¬¡è¾“å…¥ç›´æŽ¥å°†cin>>
+è¾“å…¥åŽå‰©ä¸‹çš„å­—ç¬¦ä¸²ç›´æŽ¥è¾“å…¥åˆ°stringå¯¹è±¡sä¸­ï¼ˆæ¢è¡Œç¬¦è¢«ä¸¢å¼ƒï¼‰ã€‚å¯ä»¥ä½¿ç”¨â€œcin.ignore()â€
+æ¸…é™¤ä»¥å›žè½¦ç»“æŸçš„è¾“å…¥ç¼“å†²åŒºçš„å†…å®¹,æ¶ˆé™¤ä¸Šä¸€æ¬¡è¾“å…¥å¯¹ä¸‹ä¸€æ¬¡è¾“å…¥çš„å½±å“.
+4.	cin.ignore(a,ch);ç”¨æ³•ï¼šä»Žè¾“å…¥æµï¼ˆcinï¼‰ä¸­æå–å­—ç¬¦ï¼Œæå–çš„å­—ç¬¦è¢«å¿½ç•¥ï¼ˆignoreï¼‰ï¼Œ
+ä¸è¢«ä½¿ç”¨ã€‚æ¯æŠ›å¼ƒä¸€ä¸ªå­—ç¬¦ï¼Œå®ƒéƒ½è¦è®¡æ•°å’Œæ¯”è¾ƒå­—ç¬¦ï¼šå¦‚æžœè®¡æ•°å€¼è¾¾åˆ°aæˆ–è€…è¢«æŠ›å¼ƒçš„å­—ç¬¦
+æ˜¯chï¼Œåˆ™cin.ignore()å‡½æ•°æ‰§è¡Œç»ˆæ­¢ï¼›å¦åˆ™ï¼Œå®ƒç»§ç»­ç­‰å¾…ã€‚å¦‚æžœcin.ignore()ä¸ç»™å‚æ•°ï¼Œåˆ™
+é»˜è®¤å‚æ•°ä¸ºcin.ignore(1,EOF)ï¼Œå³æŠŠEOFå‰çš„1ä¸ªå­—ç¬¦æ¸…æŽ‰ï¼Œæ²¡æœ‰é‡åˆ°EOFå°±æ¸…æŽ‰ä¸€ä¸ªå­—ç¬¦ç„¶
+åŽç»“æŸï¼Œä¼šå¯¼è‡´ä¸æ­£ç¡®çš„ç»“æžœï¼Œå› ä¸ºEOFæ˜¯æ–‡ä»¶ç»“æŸæ ‡è¯†ã€‚
 */
